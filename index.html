@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Randomize color</title>
+</head>
+<body>
+    <div class="wrapper" id="wrapper">
+        <div class="box">
+            <p class="box__text">Click to change background color</p>
+            <p class="box__text">Now color: <span class="box__color" id="colorText">rgb(255,255,255)</span></p>
+            <div class="box__checkboxes">
+                <label class="box__option">
+                    <input type="radio" class="box__input" value="hex" name="type">
+                    <span class="box__checkbox"></span>
+                    <span class="box__checktext">HEX</span>
+                </label>
+
+                <label class="box__option">
+                    <input type="radio" class="box__input" value="rgb" name="type" checked>
+                    <span class="box__checkbox"></span>
+                    <span class="box__checktext">RGB</span>
+                </label>
+
+                <label class="box__option">
+                    <input type="radio" class="box__input" value="rgba" name="type">
+                    <span class="box__checkbox"></span>
+                    <span class="box__checktext">RGBA</span>
+                </label>
+            </div>
+            <label class="box__label" for="opacity">
+                <p class="box__text">Enter opacity: </p>
+                <input type="number" name="opacity" id="opacityRange" min="0" max="1" step="0.1">
+            </label>
+            <div class="box__btns">
+                <button class="box__btn" id="randomBtn" type="button" aria-label="Изменить цвет">Change color</button>
+                <button class="box__btn" id="resetBtn" type="button" aria-label="Скинуть цвет до белого">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
